@@ -5,8 +5,6 @@ using API.Services;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
 
-
-
 namespace API.Extensions
 {
     public static class ApplicationServiceExtentions
