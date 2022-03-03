@@ -1,3 +1,8 @@
 .dropdown-togger, .dropdown-iten {
     cursor: pointer;
 }
+
+.input-field:focus {
+    background-color: white;
+    color: black;
+}

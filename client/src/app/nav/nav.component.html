@@ -13,6 +13,9 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/errors" routerLinkActive="active">Errors</a>
+            </li>
           </ng-container>
 
         </ul>
@@ -27,8 +30,8 @@
         </div>
 
         <form *ngIf="(accountService.currentUser$ | async) === null" #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">
-          <input name="username" [(ngModel)]="model.username" class="form-control me-2" type="text" placeholder="Username">
-          <input name="password" [(ngModel)]="model.password" class="form-control me-2" type="password" placeholder="Password">
+          <input name="username" [(ngModel)]="model.username" class="form-control me-2 input-field" type="text" placeholder="Username">
+          <input name="password" [(ngModel)]="model.password" class="form-control me-2 input-field" type="password" placeholder="Password">
           <button class="btn btn-outline-success" type="submit">Login</button>
         </form>
     </div>
