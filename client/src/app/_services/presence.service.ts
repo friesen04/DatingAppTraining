@@ -33,13 +33,13 @@ export class PresenceService {
 
     this.hubConnection.on('UserIsOnline', username => {
       this.onlineUsers$.pipe(take(1)).subscribe(usernames => {
-        this.onlineUsersSource.next([...usernames, username]);
+        this.onlineUsersSource.next([...usernames, username])
       })
     })
 
     this.hubConnection.on('UserIsOffline', username => {
       this.onlineUsers$.pipe(take(1)).subscribe(usernames => {
-        this.onlineUsersSource.next([...usernames.filter(x => x !== username)]);
+        this.onlineUsersSource.next([...usernames.filter(x => x !== username)])
       })
     })
 
@@ -51,7 +51,7 @@ export class PresenceService {
       this.toastr.info(knownAs + ' has sent you a new message!')
         .onTap
         .pipe(take(1))
-        .subscribe(() => this.router.navigateByUrl('/members/' + username));
+        .subscribe(() => this.router.navigateByUrl('/members/' + username))
 
     })
   }
